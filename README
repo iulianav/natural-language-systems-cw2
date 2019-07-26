@@ -1,0 +1,78 @@
+Exercise 1. a), b) and c):
+
+To run the program for task 1 you just have to run the following command:
+
+! You must make sure that the StanfordNERTagger is installed and the environment (CLASSPATH and STANFORD_MODELS)
+variables are set appropriately in order to run the program!
+
+`python task1.py`
+
+Command Line Output:
+
+```
+
+Total number of unique NLTK organizations: 222
+Total number of unique NLTK persons: 217
+
+Total number of unique Stanford organizations: 72
+Total number of unique Stanford persons: 65
+
+Number of organizations exact matches: 39
+Number of organizations partial matches: 92
+
+Number of persons exact matches: 45
+Number of persons partial matches: 15
+
+```
+
+It will also create 4 output files:
+
+nltk_persons.txt : contains the person named entities identified by NLTK, 1 per line
+nltk_organization.txt : contains the organization named entities identified by NLTK, 1 per line
+
+st_persons.txt : contains the person named entities identified by StanfordNERTagger, 1 per line
+st_organization.txt : contains the organization named entities identified by StanfordNERTagger, 1 per line
+
+
+Exercise 2: a)
+
+To run the program for task 2 a) you just have to run the following command:
+
+ex: `python task2a.py`
+
+! Run the program in the folder that you extracted from the .zip. It should contain the following needed input files: !
+
+Seed adjective files:
+
+positive_seeds.txt : contains the initial positive sentiment seed adjectives
+negative_seeds.txt : contains the initial negative sentiment seed adjectives
+rt-polaritydata folder : movie review corpus ( 2 files: rt-polarity.neg and rt-polarity.pos)
+
+It will also create 2 output files:
+
+enriched_lexicon_positives.txt : contains the original + newly added positive sentiment adjetives
+enriched_lexicon_negatives.txt : contains the original + newly added negative sentiment adjetives
+
+
+Exercise 2: b)
+
+To run the program for task 2 b) you just have to run the following command:
+
+ex: `python task2b.py`
+
+! Run the program in the folder that you extracted from the .zip. It should contain the following needed input files: !
+
+MPQA_Subjectivity_Cues_Lexicon.tff : the MPQA Subjectivity Cues Lexicon (given polarity lexicon)
+rt-polaritydata folder : movie review corpus ( 2 files: rt-polarity.neg and rt-polarity.pos)
+
+Command Line Output:
+
+```
+
+Positive Reviews Baseline Classifier Accuracy: 61.5456762334
+Negative Reviews Baseline Classifier Accuracy: 41.2868129807
+Average Baseline Classifier Accuracy: 51.416244607
+
+Mean Accuracy for SVM Classifier (k-fold validation: 5 splits): 77.11501738516249
+
+```
